@@ -1,0 +1,198 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: Lucida Sans Unicode;
+  background-color: #f0f0f0;
+  font-size: 16px;
+}
+.container{
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav-container{
+  background-color: #3b312f;
+}
+.nav-wrapper{
+  overflow: hidden;
+}
+
+.nav-main-user ul{
+  padding-top: 10px;
+  margin: 0;
+}
+.nav-main-user li{
+  list-style: none;
+  display: inline-block;
+  float: right;
+}
+.nav-main-user ul:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.nav-wrapper ul{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-wrapper ul li{
+  display: inline-block;
+  float: left;
+}
+.nav-wrapper .active a{
+  color: #959595;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.card-action a,
+.userAtext a,
+.black a{
+  color: black;
+}
+.display-login{
+  display: none;
+}
+
+.footer{
+  height: 80px;
+  background-color: #3b312f;
+  color: white;
+}
+.footer-left,
+.footer-center,
+.footer-right{
+  width: 320px;
+}
+.footer-left{
+  float: left;
+}
+.footer-left a{
+  padding:15px;
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+.footer-left p{
+  margin: 0px;
+  padding-left: 15px;
+  display: inline-block;
+  line-height: 80px;
+}
+.footer-center{
+  float: left;
+  text-align: center;
+}
+.footer-center p{
+  margin: 0px;
+}
+.footer-center p:first-child{
+  padding-top: 15px;
+}
+.footer-right{
+  text-align: right;
+  float: left;
+}
+.footer-right p{
+  margin: 0px;
+  line-height: 80px;
+  display: inline-block;
+  padding-right: 15px;
+}
+.footer-right a{
+  display: inline-block;
+  padding-top: 25px;
+  float: right;
+}
+
+.advantages p{
+  margin: 0;
+}
+.advantages p:first-child{
+  padding-top: 35px;
+  text-align: center;
+  font-size: 22px;
+}
+.advantages p:last-child{
+  padding-top: 15px;
+  padding-bottom: 35px;
+  text-align: justify;
+  width: 580px;
+  margin: 0 auto;
+}
+.advantages-container{
+  background-color: #fcb100;
+  text-align: center;
+}
+.honey-pr{
+  height: 15px;
+  background-image: url(/honey-pr.jpg);
+  background-repeat: repeat-x;
+}
+.img-mind{
+  background-image: url(/mind.png);
+  background-repeat: no-repeat;
+  width: 960px;
+  height: 345px;
+}
+.main-products{
+  text-align: center;
+}
+.products{
+  width: 320px;
+  float: left;
+  padding: 10px 0;
+  text-align: center;
+}
+.products:hover{
+  opacity:0.85;
+}
+.container-products::after{
+content: "";
+display: table;
+clear: both;
+}
+.card-title{
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+.btn{
+  width: 150px;
+  color: white;
+  font-family: Lucida Sans Unicode;
+  font-size: 16px;
+  border: 0px;
+  height: 40px;
+}
+.btn-card{
+  background-color: #fcb100;
+}
+.btn-card:hover{
+  background-color: #3b312f;
+  cursor: pointer;
+}
+.nav-main-user ul li{
+  margin: 0 10px;
+}
+.nav-main-user ul .cart{
+  margin-left: 30px;
+}
+.nav-main-user-li{
+  padding-top: 5px;
+}
+.nav-main-user-li-register a{
+  color: #fcb100;
+  font-size: 14px;
+}
+.nav-main-user-li-register a:hover{
+  color: white;
+}
+.nav-main-user-li-register a .active{
+  color: #959595;
+}

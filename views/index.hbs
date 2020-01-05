@@ -1,0 +1,64 @@
+<div class="container">
+    <div class='img-mind'></div>
+</div>
+<div class='honey-pr'></div>
+
+<div class="advantages-container">
+    <div class="container">
+        <div class="advantages">
+            <p>Натуральные Ингредиенты и Отличное Качество</p>
+            <p>мы предлагем натураьные продукты пчеловодства с высокими 
+                лечебно-восстанавливающими свойствами: без добавок и разнообразных
+                примесей, без применения сахара для кормления пчел</p>
+        </div>
+     </div> 
+</div>
+<div class="container">
+     <div class="main-products">
+         <h2>Наша продукция</h2>
+         <div>
+             <p>Для личного пользования (Цены указанны за 1 кг)</p>
+             <div class='container-products'>
+                {{#if goodsTop.length}}<!--Проверяем есть ли у нас чтото в масиве товаров -->
+                {{#each goodsTop}}<!--  директива которая итерирует масив -->
+                    
+                    <div class='products'>
+                        
+                        <a href='/products/{{id}}'>
+                            <p class='card-title'>{{title}}</p>
+                            <div class='card-image'>
+                                <img src='{{img}}' alt='{{title}}'>
+                            </div>
+                        </a>
+                        <p class='card-price'>{{price}}</p>
+                    </div>
+                {{/each}}
+                {{else}}
+                <p>Товаров пока нет</p>
+                {{/if}}
+             </div>
+         </div>
+         <div>
+             <p>Подарочные наборы</p>
+              <div class='container-products'>
+                {{#if goodsTop.length}}<!--Проверяем есть ли у нас чтото в масиве товаров -->
+                {{#each goodsTop}}<!--  директива которая итерирует масив -->
+                    
+                    <div class='products'>
+                        
+                        <a href='/products/{{id}}'>
+                            <p class='card-title'>{{title}}</p>
+                            <div class='card-image'>
+                                <img src='{{img}}' alt='{{title}}'>
+                            </div>
+                        </a>
+                        <p class='card-price'>{{price}}</p>
+                    </div>
+                {{/each}}
+                {{else}}
+                <p>Товаров пока нет</p>
+                {{/if}}
+             </div>
+         </div>
+     </div>
+ </div>

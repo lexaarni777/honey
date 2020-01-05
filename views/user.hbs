@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Личный кабинет1</h1>
+    <p class='userAtext'><a href='/orders'>Мои заказы</a></p>
+    <pre>
+        {{userId}}
+    </pre>
+    {{#ifeq userId '5db45f7e5d665f2ea4f5797f'}}
+    <p class='userAtext'><a href='/add'>Добавить товары</a></p>
+    {{/ifeq}}
+</div>

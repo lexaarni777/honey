@@ -1,0 +1,62 @@
+<div class="nav-container">
+    <div class="container">
+        <div class="nav-main">
+            <div class="nav-main-user">
+                <ul>
+                    {{#if isAuth}}
+                        {{#if isCart}}
+                        <li class="active cart"><a href='/cart'><img src='cart.png'></img></li>
+                        {{else}}
+                        <li class='cart'><a href='/cart'><img src='cart.png'></a></li>
+                        {{/if}}
+                        <li class='nav-main-user-li'><a href="/user"><img src='login.png' height='20px'></a></li>
+                        <li class='nav-main-user-li'><a href="/auth/logout"><img src='exit.png' height='20px'></a></li>
+                    {{else}}
+                        <li class='nav-main-user-li-register'><a href="/auth/login">Вход/Регистрация</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+            <nav>
+                <div class="nav-wrapper">
+                    <ul>                        
+                        {{#if isHome}}
+                        <li class="active"><a href='/'>Главная</a></li>
+                        {{else}}
+                        <li><a href='/'>Главная</a></li>
+                        {{/if}}
+
+                        {{#if isAbout}}
+                        <li class="active"><a href='/about'>О нас</a></li>
+                        {{else}}
+                        <li><a href='/about'>О нас</a></li>
+                        {{/if}}
+                        
+                        {{#if isProducts}}
+                        <li class="active"><a href='/products'>Продукция</a></li>
+                        {{else}}
+                        <li><a href='/products'>Продукция</a></li>
+                        {{/if}}
+
+                        {{#if isDelivery}}
+                        <li class="active"><a href='/delivery'>Доставка и оплата</a></li>
+                        {{else}}
+                        <li><a href='/delivery'>Доставка и оплата</a></li>
+                        {{/if}}
+
+                        {{#if isArticles}}
+                        <li class="active"><a href='/articles'>Статьи</a></li>
+                        {{else}}
+                        <li><a href='/articles'>Статьи</a></li>
+                        {{/if}}
+
+                        {{#if isContact}}
+                        <li class="active"><a href='/contact'>Контакты</a></li>
+                        {{else}}
+                        <li><a href='/contact'>Контакты</a></li>
+                        {{/if}}
+                    </ul>  
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

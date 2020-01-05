@@ -1,0 +1,63 @@
+<div class='container'>
+    <div class="tab-wrapper">
+                {{#if error}}
+                    <p>{{error}}</p>                    
+                {{/if}}
+                <h1>Забыли проль</h1>
+                <form action="/auth/reset" method="POST">
+                    <div class='input-add'>
+                        <input id='remail' name='email' type='email' class='validate' required>
+                        <label for='remail'>Email</label>
+                    </div>
+                    <input type='hidden' name="_csrf" value='{{csrf}}'>
+
+                    <button class='btn btn-add' type="submit">Сбросить</button>
+                </form>
+            </div>
+    </div>
+<style>
+.tab-wrapper{
+    padding-top: 10px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: sans-serif;
+}
+
+.tab-wrapper .tab-item,
+.tab-wrapper .radio-wrapper {display: none;}
+.tab-wrapper .tab-item{
+    background-color: #fff;
+    width: calc(100% - 40px);
+    max-width: 100%;
+    padding: 20px;
+    order: 1;
+  }
+.tab-wrapper .tab-label {
+    background-color: #e6e6e6;
+    height: 35px;
+    line-height: 35px;
+    min-width: 50px;
+    padding: 0px 20px;
+    text-align: center;
+    float: left;
+    color: #878685;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    border-right: 1px solid #c7c7c7;
+}
+
+.tab-wrapper input:checked + label{
+  background-color: #fff;
+}
+.tab-wrapper input:checked + .tab-label + .tab-item{display: block;}
+
+</style>
+
+</div>

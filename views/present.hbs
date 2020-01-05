@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>Мед для личного пользования</h1>
+    <div class='container-products'>
+        {{#if goodsOne.length}}<!--Проверяем есть ли у нас чтото в масиве товаров -->
+        {{#each goodsOne}}<!--  директива которая итерирует масив -->
+        <div class='products'>
+            <a href='/present/{{id}}'>
+                <p class='card-title'>{{title}}</p>
+                <div class='card-image'>
+                    <img src='{{img}}' alt='{{title}}'>
+                </div>
+            </a>
+            <p class='card-price'>{{price}}</p>
+            <div class='card-action'>
+                {{#if @root.isAuth}}
+                
+                {{#ifeq userId._id @root.userId}}
+                <a href='/present/{{id}}/edit?allow=true'>Редактировать</a><!-- добавили параметр по которому будут вносится имзенения -->
+                {{/ifeq}}
+
+                <form action='/cart/add' method='POST'>
+                    <input type='hidden' name="_csrf" value='{{@root.csrf}}'>
+                    <input type='hidden' name='id' value='{{id}}'>
+                    <button type='submit' class='btn btn-card'>Купить</button>
+                </form>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+        {{else}}
+         <a href='/products/one'>
+                <div class='card-image'>
+                    <img src='logo.png'>
+                </div>
+            </a>
+        {{/if}}
+    </div>
+</div>

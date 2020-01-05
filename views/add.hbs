@@ -1,0 +1,27 @@
+    <h1>Добавить новый товар</h1>
+    <form action="/add" method="POST">
+        <div class='input-add'>
+            <input id='title' name='title' type='text' class='validate'>
+            <label for='title'>Название товара</label>
+        </div>
+        <div class='input-add'>
+            <input id='description' name='description' type='text' class='validate'>
+            <label for='description'>Описание</label>
+        </div>
+        <div class='input-add'>
+            <input id='price' name='price' type='number' class='validate'>
+            <label for='price'>Цена</label>
+        </div>
+        <div class='input-add'>
+            <input id='type' name='type' type='number' class='validate'>
+            <label for='tupe'>Тип Товара</label>
+        </div>
+         <div class='input-add'>
+            <input id='img' name='img' type='text' class='validate'>
+            <label for='img'>Картинка</label>
+        </div>
+
+        <input type='hidden' name="_csrf" value='{{csrf}}'>
+
+        <button class='btn btn-add'>Добавить</button>
+    </form>

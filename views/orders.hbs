@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Мои заказы</h1>
+    <p class='userAtext'><a href='/user'>Вернуться в личный кабинет</a></p>
+    <div>
+        {{#if orders.length}}
+        <div>
+            {{#each orders}}
+            <span>
+            <span class="cart-title">
+                Заказ: <small>{{_id}}</small>
+            </span>
+                <p>Дата: {{date}}</p>
+                <p><em>{{user.userId.name}}</em>({{user.userId.email}})</p>
+
+                <ol>
+                    {{#each goods}}
+                        <li>
+                            {{good.title}} (x<strong>{{count}}</strong>)
+                        </li>
+                    {{/each}}
+                </ol>
+
+                <hr>
+
+                <p>Цена за все: {{price}}</p>
+
+
+
+            </div>  
+            {{/each}}
+        {{else}}
+            <p>Список заказов пуст</p>
+        </div>
+        {{/if}}
+    </div>
+</div>

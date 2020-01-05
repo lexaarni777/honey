@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Редактировать {{good.title}}</h1>
+    <form action="/one/edit" method="POST">
+        <div class='input-add'>
+            <input id='title' name='title' type='text' class='validate' value='{{good.title}}'>
+            <label for='title'>Название товара</label>
+        </div>
+        <div class='input-add'>
+            <input id='price' name='price' type='number' class='validate' value='{{good.price}}'>
+            <label for='price'>Цена</label>
+        </div>
+        <div class='input-add'>
+            <input id='description' name='description' type='text' class='validate' value='{{good.description}}'>
+            <label for='description'>Описание</label>
+        </div>
+        <div class='input-add'>
+            <input id='type' name='type' type='number' class='validate' value='{{good.type}}'>
+            <label for='type'>Тип товара</label>
+        </div>
+        <div class='input-add'>
+            <input id='img' name='img' type='text' class='validate' value='{{good.img}}'>
+            <label for='img'>Картинка</label>
+        </div>
+
+        <input type='hidden'name='id' value='{{good.id}}'><!-- в форме перадаем еще и id изменяемого курса-->
+        <input type='hidden' name="_csrf" value='{{csrf}}'>
+
+        <button type='submit' class='btn btn-add'>Редактировать</button>
+    </form>
+    <form action='/one/remove' method='POST'>
+            <input type='hidden' name="_csrf" value='{{csrf}}'>
+            <input type='hidden' name='id' value='{{good.id}}'>
+            <button class='btn btn-del'>Удалить товар</button>
+    </form>
+</div>
